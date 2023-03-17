@@ -497,11 +497,9 @@ for(const articleCreatedTime of noticeArticles) {
 //     }
 //    });
 
-document.ready(function() {
     if(HelpCenter.user.role != 'anonymous') {
         var gtext = document.querySelector('#dc_greetings_templat').dataset.value;
         gtext = gtext.replace('%NAME', HelpCenter.user.name);
         document.querySelector('#query').setAttribute('placeholder', gtext);
     }
-})
 
