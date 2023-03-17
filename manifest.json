@@ -412,7 +412,7 @@
                     "type": "text",
                     "description": "hc_search_greetings_template",
                     "label": "hc_search_greetings_template",
-                    "value": "Hello `%NAME%`, how can we help you"
+                    "value": "Hello %NAME%, how can we help you"
                 }
             ]
         }

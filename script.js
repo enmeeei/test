@@ -498,8 +498,9 @@ for(const articleCreatedTime of noticeArticles) {
 //    });
 
     if(HelpCenter.user.role != 'anonymous') {
-        var gtext = document.querySelector('#dc_greetings_templat').dataset.value;
-        gtext = gtext.replace('%NAME', HelpCenter.user.name);
+        var gtext = document.querySelector('#hc_greetings_template').dataset.value;
+        gtext = gtext.replace('%NAME%', HelpCenter.user.name);
         document.querySelector('#query').setAttribute('placeholder', gtext);
     }
+
 
