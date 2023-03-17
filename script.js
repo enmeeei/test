@@ -501,7 +501,7 @@ document.ready(function() {
     if(HelpCenter.user.role != 'anonymous') {
         var gtext = document.querySelector('#dc_greetings_templat').data('value');
         gtext = gtext.replace('%NAME', HelpCenter.user.name);
-        document.querySelector('#query').attr('placeholder', gtext);
+        document.querySelector('#query').setAttribute('placeholder', gtext);
     }
 })
 
