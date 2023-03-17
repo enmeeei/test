@@ -1,0 +1,92 @@
+<h1 class="visibility-hidden">{{ help_center.name }}</h1>
+
+<section id="main-content" class="section hero">
+    <div class="hero-inner">
+        <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+            class="search-icon" aria-hidden="true">
+            <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
+            <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
+        </svg>
+        {{search submit=false instant=settings.instant_search class='search search-full' placeholder='키워드로 검색해 보세요'}}
+        <span id="dc_greetings_template" data-value="{{dc 'hc_search_greetings_template'}}" style="display:none">
+        </span>
+    </div>
+</section>
+
+<div class="container">
+    <section class="section knowledge-base">
+        <section class="categories blocks">
+            <ul class="blocks-list">
+                {{#each categories}}
+                {{#is name "공지사항"}}
+                <h2>{{name}}</h2>
+                <ul>
+                    {{#each sections}}
+                    {{#each articles}}
+                    <li>
+                        <a href="{{url}}">{{title}}</a>
+                        <span class="article-created_at">{{created_at}}</span>
+                    </li>
+                    {{/each}}
+                    {{/each}}
+                </ul>
+                {{/is}}
+                {{/each}}
+            </ul>
+        </section>
+    </section>
+
+    <section class="section links">
+        <h2>바로가기</h2>
+        <ul class="blocks-list">
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+            <li><a href="#" class="link-item">바로가기 링크</a></li>
+        </ul>
+    </section>
+
+    <section class="section tp-01">
+        <h2 class="title">지식재산권 신고센터</h2>
+        <div class="content">
+            <p>오늘의집에서는 판매자의 지식재산권 보호와 침해 상품으로 인한 피해를 최소화 하기 위한 지식재산권 신고 처리 프로세스를 운영하고 있습니다.</p>
+            <a href="#" class="link-item">지식재산권 신고센터 바로가기</a>
+        </div>
+    </section>
+
+    <section class="section tp-02">
+        <h2 class="title">관리사이트 바로가기</h2>
+        <ul class="blocks-list">
+            <li>
+                <h3>파트너센터</h3>
+                <div class="text-content">
+                    <p>등록 가이드</p>
+                    <p>판매 관련 문의하기</p>
+                </div>
+                {{#link 'community' class='link-item'}}{{/link}}
+            </li>
+            <li>
+                <h3>상품광고 신청안내</h3>
+                <div class="text-content">
+                    <p>상품광고 가이드</p>
+                    <p>광고 운영 신청 및 운영안내</p>
+                </div>
+                <a href="" class="link-item">바로가기</a>
+            </li>
+            <li>
+                <h3>전문가센터</h3>
+                <div class="text-content">
+                    <p>위해상품정보</p>
+                    <p>상품운영정책</p>
+                    <p>인증 및 신고센터</p>
+                </div>
+                <a href="" class="link-item">바로가기</a>
+            </li>
+        </ul>
+    </section>
+</div>
