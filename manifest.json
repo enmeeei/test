@@ -410,8 +410,8 @@
             {
                 "identifier": "hc_search_greetings_template",
                 "type": "text",
-                "description": "hc_search_greetings_message",
-                "label": "hc_search_greetings_template_label",
+                "description": "hc_search_greetings_template",
+                "label": "hc_search_greetings_template",
                 "value": "Hello `%NAME%`, how can we help you"
             }
         ]
